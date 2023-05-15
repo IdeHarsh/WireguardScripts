@@ -311,7 +311,7 @@ function newClient() {
 		fi
 	done
 
-	for DOT_IP in {1..254}; do
+	for DOT_IP in {0..254}; do
 		DOT_EXISTS=$(grep -c "${SERVER_WG_IPV4::-1}${DOT_IP}" "/etc/wireguard/${SERVER_WG_NIC}.conf")
 		if [[ ${DOT_EXISTS} == '0' ]]; then
 			break
