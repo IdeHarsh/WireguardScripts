@@ -37,7 +37,7 @@ echo ""
 for((i=start; i<=end; i++));
 do
 #    echo   "test_${country}_$i" 
-   echo -ne  "1\n$country_$i" | sudo ./wireguardScript.sh
+   echo -ne  "1\n${country}_$i" | sudo ./wireguardScript.sh
 done
 
 
