@@ -13,8 +13,8 @@ done
 
 if [ -z "$count" ]; then
     echo ""
-    echo "### Sample usage: sudo ./removeWireguardUsers.sh --count 10"
-    echo "### Short usage: sudo ./removeWireguardUsers.sh -c 10"
+    echo "### Sample usage (Try sudo if not works): sudo ./removeWireguardUsers.sh --count 10"
+    echo "### Short usage (Try sudo if not works): sudo ./removeWireguardUsers.sh -c 10"
     echo ""
     exit 1
 fi
@@ -34,6 +34,7 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     done
 
     echo ""
+    echo "*** Clients Removed ***"
 
 else
     echo No

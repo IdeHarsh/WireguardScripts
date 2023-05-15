@@ -15,8 +15,8 @@ done
 
 if [ -z "$start" ] || [ -z "$country" ] || [ -z "$end" ]; then
     echo ""
-    echo "### Sample usage: sudo ./createWireguardUsers.sh --country us --start 10 -end 2"
-    echo "### Short usage: sudo ./createWireguardUsers.sh --c us --s 10 -e 2"
+    echo "### Sample usage (Try sudo if not works): ./createWireguardUsers.sh --country us --start 10 -end 2"
+    echo "### Short usage (Try sudo if not works): ./createWireguardUsers.sh --c us --s 10 -e 2"
     echo ""
     exit 1
 fi
@@ -37,8 +37,8 @@ echo ""
 for((i=start; i<=end; i++));
 do
    echo -ne  "1\ntest$i" | sudo ./wireguardScript.sh
-#    echo "test_$country_$i.conf"
 done
 
 
 echo ""
+echo "*** Clients Created ***"
