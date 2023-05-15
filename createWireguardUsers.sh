@@ -1,6 +1,6 @@
 #How to use
 # chmod +x ./createWireguardUsers.sh
-# sudo ./createWireguardUsers.sh --country us --start 10 -e 2
+# sudo ./createWireguardUsers.sh --country us --start 10 -end 2
 # Created by Harsh H. Rajpurohit
 
 while [[ "$#" -gt 0 ]]; do
@@ -15,7 +15,7 @@ done
 
 if [ -z "$start" ] || [ -z "$country" ] || [ -z "$end" ]; then
     echo ""
-    echo "### Sample usage: sudo ./createWireguardUsers.sh --country us --start 10 -end 2"v
+    echo "### Sample usage: sudo ./createWireguardUsers.sh --country us --start 10 -end 2"
     echo "### Short usage: sudo ./createWireguardUsers.sh --c us --s 10 -e 2"
     echo ""
     exit 1
