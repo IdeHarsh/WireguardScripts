@@ -36,7 +36,7 @@ echo "*** Creating Clients ***"
 echo ""
 for((i=start; i<=end; i++));
 do
-   echo -ne  "1\ntest$i" | sudo ./wireguardScript.sh
+   echo -ne  "1\ntest_$country_$i" | sudo ./wireguardScript.sh
 done
 
 
