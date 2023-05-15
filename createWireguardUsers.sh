@@ -25,7 +25,7 @@ fi
 echo "Country Code: $country"
 echo "Client Start No.: $start"
 echo "Client End No.: $end"
-echo "eg. File will look like --> test_${country}_$start.conf"
+echo "eg. File will look like --> ${country}_$start.conf"
 
 
 read -p "Press any key to continue... " -n1 -s
@@ -37,7 +37,7 @@ echo ""
 for((i=start; i<=end; i++));
 do
 #    echo   "test_${country}_$i" 
-   echo -ne  "1\ntest_$country_$i" | sudo ./wireguardScript.sh
+   echo -ne  "1\n$country_$i" | sudo ./wireguardScript.sh
 done
 
 
